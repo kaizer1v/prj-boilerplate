@@ -21,16 +21,23 @@ module.exports = function(grunt) {
 					expand: false,
 				},
 				files: {
-					"./dist/css/sample.css": ["./less/sample.less"]
+					"./dist/css/style.css": ["./less/style.less"]
 				}
 			}
 		},
 		
+		concat: {
+			dev: {
+				src: ["./scripts/*.js"],
+				dest: "./dist/js/script.js",
+				expanded: true
+			}
+		},
 		
 		uglify: {
 			dist: {
 				src: "./scripts/*.js",
-				dest: "./dist/js/sample.js",
+				dest: "./dist/js/script.js",
 				expanded: true,
 			}
 		},
@@ -45,13 +52,14 @@ module.exports = function(grunt) {
 			},
 			scripts: {
 				files: "./scripts/*.js",
-				tasks: "uglify",
+				tasks: "concat",
 			}
 		}
 	});
 	
 	
 	grunt.loadNpmTasks("grunt-contrib-less");
+	grunt.loadNpmTasks("grunt-contrib-concat");
 	grunt.loadNpmTasks("grunt-contrib-uglify");
 	grunt.loadNpmTasks("grunt-contrib-watch");
 	
