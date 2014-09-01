@@ -1,0 +1,8 @@
+{
+  "name": "prj_name",
+  "version": "0.1.0",
+  "description": "This is a sample project folder template.",
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
+}
