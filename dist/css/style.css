@@ -1,10 +1,4 @@
 /* Variables and Functions */
-.fixed-top {
-  position: fixed;
-  right: 0;
-  left: 0;
-  top: 0;
-}
 /* Reset */
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 html {
@@ -211,3 +205,20 @@ th {
   background: #fff;
 }
 /* Your LESS files below */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.center-me {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  /* width: auto; */
+}

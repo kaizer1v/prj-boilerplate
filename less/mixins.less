@@ -11,12 +11,12 @@
 
 
 .center-me() {
-	margin-left: auto;
-	margin-right: auto;
 	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	display: block;
+					box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+				 margin-left: auto;
+			  margin-right: auto;
+						 display: block;
 	/* width: auto; */
 }
 
@@ -24,7 +24,7 @@
   -webkit-border-radius: @radius;
      -moz-border-radius: @radius;
           border-radius: @radius;
-	   -o-border-radius: @radius;
+	     -o-border-radius: @radius;
 }
 
 
@@ -35,9 +35,37 @@
 }
 
 
-.fixed-top {
+.fixed-top(@left: 0, @right: 0, @top: 0) {
 	position: fixed;
-	right: 0;
-	left: 0;
-	top: 0;
+		 right: @right;
+			left: @left;
+			 top: @top;
+}
+
+.bordered(@b-color: @border-colour, @b-width: 1px) {
+  border-bottom: solid @b-width @b-color;
+	 border-right: solid @b-width @b-color;
+	  border-left: solid @b-width @b-color;
+		 border-top: solid @b-width @b-color;
+}
+
+.opacity(@opacity: 0.5) {
+		 -moz-opacity: @opacity;
+	 -khtml-opacity: @opacity;
+  -webkit-opacity: @opacity;
+					opacity: @opacity;
+					
+					@opperc: @opacity * 100;
+			 -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{opperc})";
+					 filter: ~"alpha(opacity=@{opperc})";
+}
+
+
+.gradient (@origin: left, @start: #ffffff, @stop: #000000) {
+    background-color: @start;
+    background-image: -webkit-linear-gradient(@origin, @start, @stop);
+    background-image: -moz-linear-gradient(@origin, @start, @stop);
+    background-image: -o-linear-gradient(@origin, @start, @stop);
+    background-image: -ms-linear-gradient(@origin, @start, @stop);
+    background-image: linear-gradient(@origin, @start, @stop);
 }
