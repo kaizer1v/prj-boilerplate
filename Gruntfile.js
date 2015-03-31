@@ -4,6 +4,8 @@
 	> npm install grunt-contrib-less
 	> npm install grunt-contrib-uglify
 	> npm install grunt-contrib-watch
+
+	This repo has been forked. So if you update this, all forked repos will be "downstreamed"
 */
 
 module.exports = function(grunt) {
@@ -27,6 +29,9 @@ module.exports = function(grunt) {
 		},
 		
 		concat: {
+			options: {
+				saperator: ';'
+			},
 			dev: {
 				src: ["./scripts/*.js"],
 				dest: "./dist/js/script.js",

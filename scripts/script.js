@@ -1,14 +1,18 @@
 // your script here.
 
-var globalVar = "I am Global";
+(function() {
 
-function one(param1) {
-  var inOne = "I am local";
-  console.log(inOne);
+	var globalVar = "I am Global";
 
-  two(inOne);    
-}
+	var one = function(param1) {
+	  var inOne = "I am local";
+	  console.log(inOne);
+	  two(inOne);    
+	}
 
-function two(param2) {
-    console.log(param2);
-}
+	var two = function(param2) {
+		console.log(param2);
+	}
+
+})();	// self invoking anonymous function
+
