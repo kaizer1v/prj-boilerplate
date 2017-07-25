@@ -1,8 +1,35 @@
 {
-  "name": "prj_name",
+  "name": "boilerplate",
   "version": "0.1.0",
   "description": "This is a sample project folder template.",
   "devDependencies": {
     "grunt": "^0.4.5"
-  }
+  },
+  "main": ".eslintrc.js",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-less": "^0.11.2",
+    "grunt-contrib-uglify": "^0.5.0",
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-watch": "^0.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaizer1v/prj-boilerplate.git"
+  },
+  "keywords": [
+    "projects",
+    "planning",
+    "boilerplate",
+    "readymade"
+  ],
+  "author": "kaizer1v",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaizer1v/prj-boilerplate/issues"
+  },
+  "homepage": "https://github.com/kaizer1v/prj-boilerplate#readme"
 }
